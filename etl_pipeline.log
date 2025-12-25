@@ -1,0 +1,274 @@
+2025-12-25 19:26:11,718 - __main__ - INFO - Initializing Volunteer Pipeline
+2025-12-25 19:26:11,718 - __main__ - INFO - CSV: members_raw.csv
+2025-12-25 19:26:11,719 - __main__ - INFO - Database: volunteer_data.db
+2025-12-25 19:26:11,719 - __main__ - INFO - ================================================================================
+2025-12-25 19:26:11,719 - __main__ - INFO - STARTING VOLUNTEER PIPELINE
+2025-12-25 19:26:11,719 - __main__ - INFO - ================================================================================
+2025-12-25 19:26:11,719 - __main__ - INFO - 
+[STEP 1] Ingesting and normalizing CSV data...
+2025-12-25 19:26:11,719 - main - INFO - Loading CSV from members_raw.csv
+2025-12-25 19:26:11,721 - main - INFO - Loaded 78 records
+2025-12-25 19:26:11,726 - main - INFO - Successfully processed 78 records
+2025-12-25 19:26:11,726 - main - INFO - Failed to process 0 records
+2025-12-25 19:26:11,727 - __main__ - INFO - ✓ Successfully normalized 78 records
+2025-12-25 19:26:11,727 - __main__ - INFO - 
+[STEP 2] Initializing database...
+2025-12-25 19:26:11,734 - database - INFO - Database initialized successfully
+2025-12-25 19:26:11,734 - __main__ - INFO - ✓ Database initialized
+2025-12-25 19:26:11,734 - __main__ - INFO - 
+[STEP 3] Loading members into database...
+2025-12-25 19:26:11,809 - __main__ - INFO - ✓ Loaded 78 members into database
+2025-12-25 19:26:11,809 - __main__ - INFO - 
+[STEP 4] Starting AI enrichment...
+2025-12-25 19:26:11,869 - ai_enrichment - INFO - Initialized AIEnricher with model: openai/gpt-4o-mini
+2025-12-25 19:26:14,377 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:14,454 - ai_enrichment - INFO - ✓ API connection test successful
+2025-12-25 19:26:14,456 - __main__ - INFO - Enriching [1/78]: Rohit Sharma
+2025-12-25 19:26:15,372 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:17,019 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.85, Skills: 3
+2025-12-25 19:26:17,020 - __main__ - INFO - Enriching [2/78]: Ananya Iyer
+2025-12-25 19:26:17,625 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:18,805 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.70, Skills: 2
+2025-12-25 19:26:18,805 - __main__ - INFO - Enriching [3/78]: Vikram
+2025-12-25 19:26:19,315 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:20,595 - __main__ - INFO -   → Persona: Passive, Confidence: 0.40, Skills: 0
+2025-12-25 19:26:20,595 - __main__ - INFO - Enriching [4/78]: Priya Mehta
+2025-12-25 19:26:21,071 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:22,186 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.80, Skills: 4
+2025-12-25 19:26:22,186 - __main__ - INFO - Enriching [5/78]: S. Banerjee
+2025-12-25 19:26:22,659 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:23,574 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.30, Skills: 0
+2025-12-25 19:26:23,574 - __main__ - INFO - Enriching [6/78]: Amit Kumar
+2025-12-25 19:26:24,178 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:26,713 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.80, Skills: 3
+2025-12-25 19:26:26,714 - __main__ - INFO - Enriching [7/78]: Neha
+2025-12-25 19:26:27,350 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:29,610 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.60, Skills: 2
+2025-12-25 19:26:29,610 - __main__ - INFO - Enriching [8/78]: Rahul Verma
+2025-12-25 19:26:30,094 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:31,760 - __main__ - INFO -   → Persona: Passive, Confidence: 0.20, Skills: 0
+2025-12-25 19:26:31,761 - __main__ - INFO - Enriching [9/78]: Karan Malhotra
+2025-12-25 19:26:32,281 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:33,376 - __main__ - INFO -   → Persona: Active Learner, Confidence: 0.75, Skills: 3
+2025-12-25 19:26:33,376 - __main__ - INFO - Enriching [10/78]: Pooja
+2025-12-25 19:26:34,113 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:34,900 - __main__ - INFO -   → Persona: Active Learner, Confidence: 0.20, Skills: 0
+2025-12-25 19:26:34,900 - __main__ - INFO - Enriching [11/78]: Arjun Singh
+2025-12-25 19:26:35,545 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:37,309 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.85, Skills: 4
+2025-12-25 19:26:37,310 - __main__ - INFO - Enriching [12/78]: Nikhil Jain
+2025-12-25 19:26:37,741 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:38,623 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.20, Skills: 0
+2025-12-25 19:26:38,623 - __main__ - INFO - Enriching [13/78]: Meenal
+2025-12-25 19:26:39,102 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:40,157 - __main__ - INFO -   → Persona: Active Learner, Confidence: 0.80, Skills: 3
+2025-12-25 19:26:40,157 - __main__ - INFO - Enriching [14/78]: Suresh R
+2025-12-25 19:26:40,731 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:41,284 - __main__ - INFO -   → Persona: Passive, Confidence: 0.20, Skills: 0
+2025-12-25 19:26:41,284 - __main__ - INFO - Enriching [15/78]: Ishita
+2025-12-25 19:26:41,670 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:43,095 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.80, Skills: 1
+2025-12-25 19:26:43,096 - __main__ - INFO - Enriching [16/78]: Dev
+2025-12-25 19:26:43,840 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:45,450 - __main__ - INFO -   → Persona: Expert Contributor, Confidence: 0.85, Skills: 4
+2025-12-25 19:26:45,450 - __main__ - INFO - Enriching [17/78]: Riya
+2025-12-25 19:26:45,914 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:47,120 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.30, Skills: 0
+2025-12-25 19:26:47,120 - __main__ - INFO - Enriching [18/78]: Ajay
+2025-12-25 19:26:47,621 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:49,098 - __main__ - INFO -   → Persona: Active Learner, Confidence: 0.70, Skills: 1
+2025-12-25 19:26:49,098 - __main__ - INFO - Enriching [19/78]: Sunita
+2025-12-25 19:26:49,881 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:50,805 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.20, Skills: 0
+2025-12-25 19:26:50,805 - __main__ - INFO - Enriching [20/78]: Mohit Aggarwal
+2025-12-25 19:26:51,484 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:53,067 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.85, Skills: 2
+2025-12-25 19:26:53,067 - __main__ - INFO - Enriching [21/78]: Tanvi
+2025-12-25 19:26:53,672 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:54,904 - __main__ - INFO -   → Persona: Active Learner, Confidence: 0.70, Skills: 3
+2025-12-25 19:26:54,904 - __main__ - INFO - Enriching [22/78]: Yash
+2025-12-25 19:26:55,614 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:56,542 - __main__ - INFO -   → Persona: Passive, Confidence: 0.50, Skills: 0
+2025-12-25 19:26:56,543 - __main__ - INFO - Enriching [23/78]: Abhishek
+2025-12-25 19:26:57,150 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:26:58,704 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.85, Skills: 2
+2025-12-25 19:26:58,704 - __main__ - INFO - Enriching [24/78]: Kriti
+2025-12-25 19:26:59,271 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:00,395 - __main__ - INFO -   → Persona: Passive, Confidence: 0.20, Skills: 0
+2025-12-25 19:27:00,395 - __main__ - INFO - Enriching [25/78]: Manish
+2025-12-25 19:27:01,024 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:01,971 - __main__ - INFO -   → Persona: Active Learner, Confidence: 0.70, Skills: 4
+2025-12-25 19:27:01,971 - __main__ - INFO - Enriching [26/78]: Sneha
+2025-12-25 19:27:02,681 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:03,427 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.70, Skills: 0
+2025-12-25 19:27:03,427 - __main__ - INFO - Enriching [27/78]: Raj
+2025-12-25 19:27:04,319 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:04,836 - __main__ - INFO -   → Persona: Passive, Confidence: 0.30, Skills: 0
+2025-12-25 19:27:04,837 - __main__ - INFO - Enriching [28/78]: Alok
+2025-12-25 19:27:05,479 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:07,661 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.80, Skills: 3
+2025-12-25 19:27:07,661 - __main__ - INFO - Enriching [29/78]: Simran
+2025-12-25 19:27:08,109 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:09,324 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.20, Skills: 0
+2025-12-25 19:27:09,324 - __main__ - INFO - Enriching [30/78]: Deepak
+2025-12-25 19:27:10,362 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:11,445 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.85, Skills: 2
+2025-12-25 19:27:11,445 - __main__ - INFO - Enriching [31/78]: Anil
+2025-12-25 19:27:12,203 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:13,771 - __main__ - INFO -   → Persona: Passive, Confidence: 0.10, Skills: 0
+2025-12-25 19:27:13,771 - __main__ - INFO - Enriching [32/78]: Payal
+2025-12-25 19:27:14,232 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:15,180 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.40, Skills: 0
+2025-12-25 19:27:15,180 - __main__ - INFO - Enriching [33/78]: Rakesh
+2025-12-25 19:27:15,657 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:17,432 - __main__ - INFO -   → Persona: Active Learner, Confidence: 0.75, Skills: 2
+2025-12-25 19:27:17,432 - __main__ - INFO - Enriching [34/78]: Shweta
+2025-12-25 19:27:18,177 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:19,002 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.50, Skills: 0
+2025-12-25 19:27:19,002 - __main__ - INFO - Enriching [35/78]: Varun
+2025-12-25 19:27:19,451 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:20,705 - __main__ - INFO -   → Persona: Active Learner, Confidence: 0.70, Skills: 2
+2025-12-25 19:27:20,706 - __main__ - INFO - Enriching [36/78]: Kavita
+2025-12-25 19:27:21,139 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:22,139 - __main__ - INFO -   → Persona: Passive, Confidence: 0.30, Skills: 0
+2025-12-25 19:27:22,139 - __main__ - INFO - Enriching [37/78]: Siddharth
+2025-12-25 19:27:23,058 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:24,085 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.80, Skills: 3
+2025-12-25 19:27:24,085 - __main__ - INFO - Enriching [38/78]: Pankaj
+2025-12-25 19:27:24,649 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:26,402 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.30, Skills: 0
+2025-12-25 19:27:26,402 - __main__ - INFO - Enriching [39/78]: Naina
+2025-12-25 19:27:26,874 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:28,797 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.80, Skills: 2
+2025-12-25 19:27:28,797 - __main__ - INFO - Enriching [40/78]: Gaurav
+2025-12-25 19:27:29,318 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:29,976 - __main__ - INFO -   → Persona: Passive, Confidence: 0.20, Skills: 0
+2025-12-25 19:27:29,976 - __main__ - INFO - Enriching [41/78]: Ritu
+2025-12-25 19:27:30,636 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:31,561 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.20, Skills: 0
+2025-12-25 19:27:31,561 - __main__ - INFO - Enriching [42/78]: Harsh
+2025-12-25 19:27:32,006 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:33,597 - __main__ - INFO -   → Persona: Active Learner, Confidence: 0.70, Skills: 4
+2025-12-25 19:27:33,597 - __main__ - INFO - Enriching [43/78]: Komal
+2025-12-25 19:27:34,833 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:35,775 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.10, Skills: 0
+2025-12-25 19:27:35,775 - __main__ - INFO - Enriching [44/78]: Ashwin
+2025-12-25 19:27:36,375 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:37,191 - __main__ - INFO -   → Persona: Passive, Confidence: 0.70, Skills: 0
+2025-12-25 19:27:37,191 - __main__ - INFO - Enriching [45/78]: Swati
+2025-12-25 19:27:37,906 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:39,036 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.30, Skills: 0
+2025-12-25 19:27:39,036 - __main__ - INFO - Enriching [46/78]: Prateek
+2025-12-25 19:27:39,507 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:40,905 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.80, Skills: 0
+2025-12-25 19:27:40,905 - __main__ - INFO - Enriching [47/78]: Ankita
+2025-12-25 19:27:42,206 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:43,323 - __main__ - INFO -   → Persona: Active Learner, Confidence: 0.60, Skills: 0
+2025-12-25 19:27:43,323 - __main__ - INFO - Enriching [48/78]: Sanjay
+2025-12-25 19:27:44,267 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:45,807 - __main__ - INFO -   → Persona: Passive, Confidence: 0.20, Skills: 0
+2025-12-25 19:27:45,808 - __main__ - INFO - Enriching [49/78]: Ira
+2025-12-25 19:27:46,330 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:47,226 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.80, Skills: 2
+2025-12-25 19:27:47,226 - __main__ - INFO - Enriching [50/78]: Rohini
+2025-12-25 19:27:47,768 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:49,168 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.20, Skills: 0
+2025-12-25 19:27:49,169 - __main__ - INFO - Enriching [51/78]: Kunal
+2025-12-25 19:27:50,093 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:50,815 - __main__ - INFO -   → Persona: Active Learner, Confidence: 0.70, Skills: 2
+2025-12-25 19:27:50,815 - __main__ - INFO - Enriching [52/78]: Puneet
+2025-12-25 19:27:51,660 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:53,213 - __main__ - INFO -   → Persona: Passive, Confidence: 0.30, Skills: 0
+2025-12-25 19:27:53,213 - __main__ - INFO - Enriching [53/78]: Farhan
+2025-12-25 19:27:53,674 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:55,420 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.80, Skills: 3
+2025-12-25 19:27:55,420 - __main__ - INFO - Enriching [54/78]: Ayesha
+2025-12-25 19:27:56,237 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:57,018 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.20, Skills: 0
+2025-12-25 19:27:57,018 - __main__ - INFO - Enriching [55/78]: Naveen
+2025-12-25 19:27:57,498 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:27:59,280 - __main__ - INFO -   → Persona: Active Learner, Confidence: 0.70, Skills: 2
+2025-12-25 19:27:59,280 - __main__ - INFO - Enriching [56/78]: Lata
+2025-12-25 19:27:59,819 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:00,642 - __main__ - INFO -   → Persona: Passive, Confidence: 0.10, Skills: 0
+2025-12-25 19:28:00,643 - __main__ - INFO - Enriching [57/78]: Sameer
+2025-12-25 19:28:01,560 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:02,878 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.70, Skills: 2
+2025-12-25 19:28:02,879 - __main__ - INFO - Enriching [58/78]: Divya
+2025-12-25 19:28:03,297 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:04,227 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.20, Skills: 0
+2025-12-25 19:28:04,227 - __main__ - INFO - Enriching [59/78]: Ravi
+2025-12-25 19:28:04,639 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:05,690 - __main__ - INFO -   → Persona: Active Learner, Confidence: 0.70, Skills: 2
+2025-12-25 19:28:05,691 - __main__ - INFO - Enriching [60/78]: Shalini
+2025-12-25 19:28:06,114 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:06,818 - __main__ - INFO -   → Persona: Passive, Confidence: 0.20, Skills: 0
+2025-12-25 19:28:06,818 - __main__ - INFO - Enriching [61/78]: Tushar
+2025-12-25 19:28:07,241 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:08,587 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.80, Skills: 2
+2025-12-25 19:28:08,587 - __main__ - INFO - Enriching [62/78]: Juhi
+2025-12-25 19:28:09,144 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:10,202 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.20, Skills: 0
+2025-12-25 19:28:10,203 - __main__ - INFO - Enriching [63/78]: Omkar
+2025-12-25 19:28:10,680 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:12,314 - __main__ - INFO -   → Persona: Active Learner, Confidence: 0.60, Skills: 2
+2025-12-25 19:28:12,314 - __main__ - INFO - Enriching [64/78]: Pallavi
+2025-12-25 19:28:13,043 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:14,773 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.20, Skills: 0
+2025-12-25 19:28:14,774 - __main__ - INFO - Enriching [65/78]: Arvind
+2025-12-25 19:28:15,412 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:16,697 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.80, Skills: 3
+2025-12-25 19:28:16,697 - __main__ - INFO - Enriching [66/78]: Maya
+2025-12-25 19:28:17,233 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:18,142 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.10, Skills: 0
+2025-12-25 19:28:18,142 - __main__ - INFO - Enriching [67/78]: Kishore
+2025-12-25 19:28:18,626 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:19,721 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.80, Skills: 2
+2025-12-25 19:28:19,721 - __main__ - INFO - Enriching [68/78]: Rupal
+2025-12-25 19:28:20,506 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:21,101 - __main__ - INFO -   → Persona: Passive, Confidence: 0.30, Skills: 0
+2025-12-25 19:28:21,101 - __main__ - INFO - Enriching [69/78]: Aditya
+2025-12-25 19:28:21,511 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:22,579 - __main__ - INFO -   → Persona: Expert Contributor, Confidence: 0.85, Skills: 3
+2025-12-25 19:28:22,580 - __main__ - INFO - Enriching [70/78]: Neelam
+2025-12-25 19:28:23,075 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:23,823 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.80, Skills: 0
+2025-12-25 19:28:23,823 - __main__ - INFO - Enriching [71/78]: Vikas
+2025-12-25 19:28:24,307 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:25,496 - __main__ - INFO -   → Persona: Active Learner, Confidence: 0.50, Skills: 1
+2025-12-25 19:28:25,496 - __main__ - INFO - Enriching [72/78]: Chitra
+2025-12-25 19:28:25,934 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:27,277 - __main__ - INFO -   → Persona: Passive, Confidence: 0.20, Skills: 0
+2025-12-25 19:28:27,277 - __main__ - INFO - Enriching [73/78]: Saurabh
+2025-12-25 19:28:27,800 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:28,690 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.80, Skills: 2
+2025-12-25 19:28:28,691 - __main__ - INFO - Enriching [74/78]: Reema
+2025-12-25 19:28:29,107 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:29,787 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.30, Skills: 0
+2025-12-25 19:28:29,788 - __main__ - INFO - Enriching [75/78]: Hemant
+2025-12-25 19:28:30,175 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:31,271 - __main__ - INFO -   → Persona: Active Learner, Confidence: 0.70, Skills: 2
+2025-12-25 19:28:31,271 - __main__ - INFO - Enriching [76/78]: Lavanya
+2025-12-25 19:28:32,353 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:33,121 - __main__ - INFO -   → Persona: Passive, Confidence: 0.20, Skills: 0
+2025-12-25 19:28:33,121 - __main__ - INFO - Enriching [77/78]: Uday
+2025-12-25 19:28:33,879 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:35,233 - __main__ - INFO -   → Persona: Mentor Material, Confidence: 0.80, Skills: 2
+2025-12-25 19:28:35,233 - __main__ - INFO - Enriching [78/78]: Preeti
+2025-12-25 19:28:35,774 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 19:28:36,558 - __main__ - INFO -   → Persona: Needs Guidance, Confidence: 0.30, Skills: 0
+2025-12-25 19:28:36,563 - __main__ - INFO - ✓ AI enrichment completed: 78 success, 0 failed
+2025-12-25 19:28:36,564 - __main__ - INFO - 
+[STEP 5] Generating pipeline summary...
+2025-12-25 19:28:36,574 - __main__ - INFO - 
+================================================================================
+2025-12-25 19:28:36,574 - __main__ - INFO - PIPELINE COMPLETED SUCCESSFULLY
+2025-12-25 19:28:36,574 - __main__ - INFO - ================================================================================
+2025-12-25 19:28:36,574 - __main__ - INFO - 
+Database created: volunteer_data.db
+2025-12-25 19:28:36,575 - __main__ - INFO - Logs saved: pipeline.log, etl_pipeline.log
+2025-12-25 19:28:36,575 - __main__ - INFO - 
+Next steps:
+2025-12-25 19:28:36,575 - __main__ - INFO -   1. Query data: python query_interface.py stats
+2025-12-25 19:28:36,575 - __main__ - INFO -   2. Find mentors: python query_interface.py mentors --location Mumbai
+2025-12-25 19:28:36,575 - __main__ - INFO -   3. Review low confidence: python query_interface.py low-confidence
